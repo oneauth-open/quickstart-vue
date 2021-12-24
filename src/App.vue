@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <div>
+      <button @click="login">login</button>
+    </div>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -7,7 +10,18 @@
     <router-view />
   </div>
 </template>
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
 
+@Component({
+  components: {},
+})
+export default class App extends Vue {
+  private login() {
+    this.$oneAuth.login();
+  }
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
