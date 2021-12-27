@@ -14,6 +14,7 @@ module.exports = {
     config.module
       .rule("eslint")
       .exclude.add(/sdk-core/)
+      .add(/sdk-vue/)
       .end();
   },
   configureWebpack: (config) => {
