@@ -2,7 +2,6 @@ import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 import Home from "../views/Home.vue";
 import { LoginCallback, navigationGuard } from "oneauth-sdk-vue";
-Vue.use(VueRouter);
 
 Vue.use(VueRouter);
 
