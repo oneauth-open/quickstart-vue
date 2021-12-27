@@ -19,6 +19,7 @@ import { Component, Vue } from "vue-property-decorator";
 export default class App extends Vue {
   private login() {
     this.$oneAuth.login();
+    this.$router;
   }
 }
 </script>
