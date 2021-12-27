@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 module.exports = {
   devServer: {
     proxy: {
@@ -24,5 +26,8 @@ module.exports = {
       .rule("eslint")
       .exclude.add(/sdk-core/)
       .end();
+  },
+  configureWebpack: (config) => {
+    config.plugins.push(new BundleAnalyzerPlugin());
   },
 };
